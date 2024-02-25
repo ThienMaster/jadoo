@@ -1,0 +1,54 @@
+@use "../../abstracts" as abst;
+
+.header {
+  padding-top: 60px;
+
+  &-top {
+    @include abst.flexBox(
+      ((align-items: center, justify-content: space-between))
+    );
+  }
+
+  &-menu {
+    &-list {
+      @include abst.flexBox(((align-items: center, gap: 55px)));
+    }
+
+    &-links {
+      font-family: abst.$font-secondary;
+      color: abst.$black-212;
+      font-size: 17px;
+      line-height: calc(21.62 / 17);
+    }
+  }
+
+  &-button {
+    @include abst.flexBox(((align-items: center, gap: 52px)));
+    font-family: abst.$font-secondary;
+    font-size: 17px;
+    line-height: calc(21.62 / 17);
+
+    .button-login {
+      color: abst.$black-212;
+    }
+
+    .button-signup {
+      padding: 9px 21px;
+      border-radius: 5px;
+      border: 1px solid abst.$black-212;
+      color: abst.$black-212;
+    }
+  }
+
+  &-language {
+    @include abst.flexBox(((align-items: center, gap: 7px)));
+    font-family: abst.$font-secondary;
+    font-size: 17px;
+    line-height: calc(21.62 / 17);
+
+    a,
+    span {
+      color: abst.$black-212;
+    }
+  }
+}

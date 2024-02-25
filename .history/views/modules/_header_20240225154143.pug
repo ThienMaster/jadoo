@@ -1,0 +1,17 @@
+header.header
+  .container
+    .header-top
+      //- Logo
+      a.logo(href="./")
+        img(src="./images/Logo.svg", alt="Logo Jadoo")
+      //- Menu
+      nav.header-menu
+        ul.header-menu-list
+          each menu in [{href: "#!", title: "Desitnations"}, {href: "#!", title: "Hotels"}, {href: "#!", title: "Flights"}, {href: "#!", title: "Bookings"}]
+            li.header-menu-item
+              a.header-menu-links(href= menu.href)= menu. title
+      //- Button
+
+      //- Change Language
+
+    .hero

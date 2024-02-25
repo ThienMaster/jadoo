@@ -1,0 +1,86 @@
+@use "../../abstracts" as abst;
+
+.header {
+  position: relative;
+
+  &-decore {
+    position: absolute;
+    right: 0;
+    z-index: -1;
+  }
+
+  &-top {
+    @include abst.flexBox(
+      ((align-items: center, justify-content: space-between))
+    );
+    padding-top: 30px;
+  }
+
+  &-menu {
+    margin-left: auto;
+    margin-right: 86px;
+
+    &-list {
+      @include abst.flexBox(((align-items: center, gap: 55px)));
+    }
+
+    &-links {
+      font-family: abst.$font-secondary;
+      color: abst.$black-212;
+      font-size: 17px;
+      line-height: calc(21.62 / 17);
+      @include abst.fontWeight("medium");
+      transition: all 0.2s linear;
+
+      &:hover {
+        text-shadow: 0.7px 0 0 currentColor;
+        color: abst.$black-212;
+      }
+    }
+  }
+
+  &-button {
+    @include abst.flexBox(((align-items: center, gap: 52px)));
+    font-family: abst.$font-secondary;
+    font-size: 17px;
+    line-height: calc(21.62 / 17);
+    @include abst.fontWeight("medium");
+
+    .button-login {
+      color: abst.$black-212;
+      transition: all 0.2s linear;
+
+      &:hover {
+        text-shadow: 0.7px 0 0 currentColor;
+        color: abst.$black-212;
+      }
+    }
+
+    .button-signup {
+      padding: 9px 21px;
+      border-radius: 5px;
+      border: 1px solid abst.$black-212;
+      color: abst.$black-212;
+    }
+  }
+
+  &-language {
+    @include abst.flexBox(((align-items: center, gap: 7px)));
+    font-family: abst.$font-secondary;
+    font-size: 17px;
+    line-height: calc(21.62 / 17);
+    @include abst.fontWeight("medium");
+    margin-left: 42px;
+    transition: all 0.2s linear;
+
+    &:hover {
+      text-shadow: 0.7px 0 0 currentColor;
+      color: abst.$black-212;
+    }
+
+    a,
+    span {
+      color: abst.$black-212;
+    }
+  }
+}

@@ -1,0 +1,61 @@
+@use "../../abstracts" as abst;
+
+.services {
+  margin-block: 97px 123px;
+
+  &-container {
+    position: relative;
+  }
+
+  &-top {
+    margin-bottom: 66px;
+    text-align: center;
+  }
+
+  &-caption {
+    @include abst.fontWeight("semibold");
+    font-size: 18px;
+    line-height: calc(27 / 18);
+    margin-bottom: 10px;
+  }
+
+  &-heading {
+    color: abst.$clr-3rd;
+    font-size: 50px;
+    line-height: calc(64.5 / 50);
+  }
+
+  &-list {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 78px;
+  }
+
+  &-item {
+    @include abst.flexBox(((flex-direction: column, align-items: center)));
+    background-color: #fff;
+    border-radius: 36px;
+    padding: 25px;
+    transition: all 0.2s linear;
+
+    &:hover {
+      box-shadow: 0px 14px 28px 0px rgba(0, 0, 0, 0.05);
+      cursor: pointer;
+    }
+
+    &-title {
+      font-family: abst.$font-secondary;
+      color: abst.$text-heading;
+      @include abst.fontWeight("semibold");
+      font-size: 20px;
+      line-height: calc(27.24 / 20);
+      margin-block: 29px 15px;
+    }
+
+    &-desc {
+      line-height: calc(26 / 16);
+      text-align: center;
+      max-width: 181px;
+    }
+  }
+}

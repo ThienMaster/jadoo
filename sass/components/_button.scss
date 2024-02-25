@@ -1,0 +1,9 @@
+@use "../abstracts" as abst;
+
+.button {
+  all: unset;
+  color: #fff;
+  border-radius: 10px;
+  width: fit-content;
+  cursor: pointer;
+}

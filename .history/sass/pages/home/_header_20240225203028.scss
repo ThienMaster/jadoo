@@ -1,0 +1,188 @@
+@use "../../abstracts" as abst;
+
+.header {
+  position: relative;
+
+  &-decore {
+    position: absolute;
+    right: 0;
+    z-index: -1;
+    width: 745px;
+    object-fit: cover;
+  }
+
+  &-top {
+    @include abst.flexBox(
+      ((align-items: center, justify-content: space-between))
+    );
+    padding-top: 30px;
+  }
+
+  .logo {
+    flex-shrink: 0;
+  }
+
+  &-menu {
+    margin-left: auto;
+    margin-right: 86px;
+
+    &-list {
+      @include abst.flexBox(((align-items: center, gap: 55px)));
+    }
+
+    &-links {
+      font-family: abst.$font-secondary;
+      color: abst.$black-212;
+      font-size: 17px;
+      line-height: calc(21.62 / 17);
+      @include abst.fontWeight("medium");
+      transition: all 0.2s linear;
+
+      &:hover {
+        text-shadow: 0.7px 0 0 currentColor;
+        color: abst.$black-212;
+      }
+    }
+  }
+
+  &-button {
+    @include abst.flexBox(((align-items: center, gap: 52px)));
+    font-family: abst.$font-secondary;
+    font-size: 17px;
+    line-height: calc(21.62 / 17);
+    @include abst.fontWeight("medium");
+
+    .button-login {
+      color: abst.$black-212;
+      transition: all 0.2s linear;
+
+      &:hover {
+        text-shadow: 0.7px 0 0 currentColor;
+        color: abst.$black-212;
+      }
+    }
+
+    .button-signup {
+      display: inline-block;
+      padding: 9px 21px;
+      border-radius: 5px;
+      border: 1px solid abst.$black-212;
+      color: abst.$black-212;
+    }
+  }
+
+  &-language {
+    @include abst.flexBox(((align-items: center, gap: 7px)));
+    font-family: abst.$font-secondary;
+    color: abst.$black-212;
+    font-size: 17px;
+    line-height: calc(21.62 / 17);
+    @include abst.fontWeight("medium");
+    margin-left: 42px;
+    transition: all 0.2s linear;
+
+    &:hover {
+      text-shadow: 0.7px 0 0 currentColor;
+      color: abst.$black-212;
+      cursor: pointer;
+    }
+  }
+}
+
+.hero {
+  margin-top: 18px;
+  @include abst.flexBox(
+    ((align-items: center, justify-content: space-between))
+  );
+  position: relative;
+
+  &-content {
+    padding-block: 112px 117px;
+    max-width: 630px;
+  }
+
+  &-tagline {
+    text-transform: uppercase;
+    color: #df6951;
+    font-size: 20px;
+    line-height: calc(30 / 20);
+    @include abst.fontWeight("bold");
+    margin-bottom: 24px;
+  }
+
+  &-heading {
+    color: abst.$clr-1st;
+    font-size: 84px;
+    line-height: calc(89 / 84);
+    letter-spacing: -2px;
+  }
+
+  &-caption {
+    line-height: calc(30 / 16);
+    margin-block: 30px 34px;
+    max-width: 477px;
+  }
+
+  &-links {
+    @include abst.flexBox(((align-items: center, gap: 44px)));
+  }
+
+  &-button {
+    display: inline-block;
+    padding: 19px 27px;
+    font-family: abst.$font-primary;
+    @include abst.fontWeight("medium");
+    font-size: 18px;
+    line-height: calc(22.9 / 18);
+    background-color: #f1a501;
+    transition: all 0.2s linear;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  &-play {
+    @include abst.flexBox(((align-items: center, gap: 21px)));
+
+    &-icon {
+      @include abst.size(52px);
+      border-radius: 100rem;
+      background-color: #df6951;
+      @include abst.flexBox(((align-items: center, justify-content: center)));
+      color: #fff;
+      font-size: 15px;
+      box-shadow: 0px 15px 30px 0px #df69514d;
+    }
+
+    &-text {
+      color: #686d77;
+      font-size: 17px;
+      line-height: calc(25.5 / 17);
+      transition: all 0.2s linear;
+
+      &:hover {
+        text-shadow: 1px 0 0 currentColor;
+        color: abst.$black-212;
+      }
+    }
+  }
+
+  &-image {
+    position: absolute;
+    right: 0;
+
+    &-1 {
+      position: absolute;
+      left: 148px;
+      top: 56px;
+    }
+
+    &-2 {
+      position: absolute;
+      right: -19px;
+      top: 103px;
+      z-index: -1;
+    }
+  }
+}

@@ -1,0 +1,33 @@
+header.header
+  img.header-decore(src="./images/Decore.png", alt="Decore")
+  .container
+    .header-top
+      //- Logo
+      a.logo(href="./")
+        img(src="./images/Logo.svg", alt="Logo Jadoo")
+      //- Menu
+      nav.header-menu
+        ul.header-menu-list
+          each menu in [{href: "#!", title: "Desitnations"}, {href: "#!", title: "Hotels"}, {href: "#!", title: "Flights"}, {href: "#!", title: "Bookings"}]
+            li.header-menu-item
+              a.header-menu-links(href= menu.href)= menu. title
+      //- Button
+      .header-button
+        a.button-login(href="#!") Login
+        a.button.button-signup(href="#!") Sign up
+      //- Change Language
+      a.header-language(href="#!") EN
+        i.fa-solid.fa-chevron-down.fa-xs
+    .hero
+      .hero-content
+        h2.hero-tagline Best Destinations around the world
+        h1.heading.hero-heading Travel, enjoy and live a new and full life
+        p.hero-caption Built Wicket longer admire do barton vanity itself do in it. Preferred to sportsmen it engrossed listening. Park gate sell they west hard for the.
+        .hero-links
+          a.button.hero-button(href="#!") Find out more
+          .hero-play
+            a(href="#!").hero-play-icon
+              i.fa-solid.fa-play.fa-lg
+            span.hero-play-text Play Demo
+      .hero-image
+        img(src="../../images/Traveller 1.svg", alt="Traveller")

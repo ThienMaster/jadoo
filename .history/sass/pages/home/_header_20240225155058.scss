@@ -1,0 +1,11 @@
+@use "../../abstracts" as abst;
+
+.header {
+  padding-top: 60px;
+
+  &-top {
+    @include abst.flexBox(
+      ((align-items: center, justify-content: space-between))
+    );
+  }
+}
