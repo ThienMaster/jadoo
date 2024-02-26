@@ -1,0 +1,35 @@
+@use "../../abstracts" as abst;
+
+.destinations {
+  &-top {
+    margin-bottom: 60px;
+    text-align: center;
+  }
+
+  &-caption {
+    @include abst.fontWeight("semibold");
+    font-size: 18px;
+    line-height: calc(27 / 18);
+    margin-bottom: 10px;
+  }
+
+  &-heading {
+    color: abst.$clr-3rd;
+    font-size: 50px;
+    line-height: calc(64.5 / 50);
+  }
+
+  &-list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    column-gap: 35px;
+  }
+
+  &-item {
+    &-image {
+      @include abst.size(314px, 327px);
+      object-fit: cover;
+      object-position: bottom;
+    }
+  }
+}

@@ -1,0 +1,19 @@
+section.destinations
+  .container
+    //- Top
+    .destinations-top
+      p.destinations-caption Top Selling
+      h2.heading.destinations-heading Top Destinations
+    //- Destinations list
+    ul.destinations-list
+      each val in [1,2,3]
+        li.destinations-item
+          .destinations-item-image
+            img(src="../../images/2.png", alt="")
+          .destinations-item-content
+            .destinations-content-top
+              span.destinations-sites Rome, Italty
+              span.destinations-prices $5,42k
+            .destinations-content-date
+              img.destinations-location(src="../../images/location-arrow.svg", alt="location-arrow")
+              span.destinations-days 10 Days Trip

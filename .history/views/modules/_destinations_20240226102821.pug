@@ -1,0 +1,18 @@
+-
+  var destinations_list = [
+    {image: "../../images/destinations/destinations-1.png", alt: "Rome, Italty", sites: "Rome, Italty", prices: "$5,42k", days: "10 Days Trip"},
+    {image: "../../images/destinations/destinations-2.png", alt: "London, UK", sites: "London, UK", prices: "$4.2k", days: "12 Days Trip"},
+    {image: "../../images/destinations/destinations-3.png", alt: "Full Europe", sites: "Full Europe", prices: "$15k", days: "28 Days Trip"}
+  ];
+
+section.destinations
+  .container
+    //- Top
+    .destinations-top
+      p.destinations-caption Top Selling
+      h2.heading.destinations-heading Top Destinations
+    //- Destinations list
+    ul.destinations-list
+      each destinations_item in destinations_list
+        +destinationsItem(destinations_item.image, destinations_item.alt, destinations_item.sites, destinations_item.prices, destinations_item.days)
+    img.destinations-decore(src="../../images/destinations/Decore.svg", alt="Decore")

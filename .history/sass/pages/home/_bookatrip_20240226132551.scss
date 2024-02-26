@@ -1,0 +1,198 @@
+@use "../../abstracts" as abst;
+
+.bookatrip {
+  margin-block: 186px 200px;
+
+  &-inner {
+    @include abst.flexBox(((align-items: center, gap: 118px)));
+    position: relative;
+  }
+
+  &-caption {
+    @include abst.fontWeight("semibold");
+    font-size: 18px;
+    line-height: calc(27 / 18);
+  }
+
+  &-heading {
+    text-transform: capitalize;
+    font-size: 50px;
+    line-height: calc(64.5 / 50);
+    margin-block: 15px 31px;
+    max-width: 511px;
+  }
+
+  &-list {
+    @include abst.flexBox(((flex-direction: column, gap: 48px)));
+    max-width: 395px;
+  }
+
+  &-item {
+    @include abst.flexBox(((align-items: flex-start, gap: 21px)));
+
+    &-image {
+      cursor: pointer;
+    }
+
+    &-info {
+      line-height: calc(19.92 / 16);
+
+      .bookatrip-title {
+        color: abst.$text-clr;
+        @include abst.fontWeight("bold");
+        margin-bottom: 4px;
+        transition: all 0.2s linear;
+
+        &:hover {
+          text-shadow: 0.5px 0 0 currentColor;
+          color: abst.$black-212;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  &-card {
+    padding-block: 78px 14px;
+    position: relative;
+
+    &-inner {
+      background-color: #fff;
+      box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+      border-radius: 26px;
+      padding: 20px 25px 31px;
+    }
+
+    &-image {
+      border-radius: 24px;
+    }
+
+    &-title {
+      color: #080809;
+      font-size: 18px;
+      line-height: calc(22.41 / 18);
+      // letter-spacing: 1px;
+      margin-block: 26px 13px;
+      @include abst.fontWeight("medium");
+      transition: 0.5s;
+
+      &:hover {
+        text-shadow: 0.7px 0 0 currentColor;
+        color: abst.$black-212;
+        cursor: pointer;
+      }
+    }
+
+    &-caption {
+      color: #84829a;
+      line-height: calc(19.92 / 16);
+      transition: 0.5s;
+
+      &:hover {
+        text-shadow: 0.5px 0 0 currentColor;
+        color: #84829a;
+        cursor: pointer;
+      }
+    }
+
+    &-options {
+      @include abst.flexBox(((align-items: center, gap: 18px)));
+      margin-block: 21px 29px;
+    }
+
+    &-icon {
+      @include abst.size(36px);
+      border-radius: 100rem;
+      background-color: #f5f5f5;
+      @include abst.flexBox(((align-items: center, justify-content: center)));
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    &-people {
+      @include abst.flexBox(
+        ((align-items: center, justify-content: space-between))
+      );
+
+      &-left {
+        @include abst.flexBox(((align-items: center, gap: 15px)));
+      }
+    }
+
+    &-small {
+      @include abst.size(263px, 129px);
+      padding: 20px;
+      @include abst.flexBox(((align-items: flex-start, gap: 12px)));
+      background-color: #fff;
+      box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+      border-radius: 18px;
+      position: absolute;
+      bottom: 68px;
+      left: 265px;
+    }
+
+    &-img {
+      @include abst.size(50px);
+
+      img {
+        @include abst.imageCover;
+        border-radius: 100rem;
+      }
+    }
+
+    &-content {
+      .bookatrip-ongoing {
+        color: #84829a;
+        font-size: 14px;
+        line-height: calc(17.43 / 14);
+        letter-spacing: -3.5%;
+      }
+
+      .bookatrip-rome {
+        color: #080809;
+        font-size: 18px;
+        line-height: calc(22.41 / 18);
+        letter-spacing: -1.5%;
+        margin-block: 6px 14px;
+      }
+
+      .bookatrip-number,
+      .bookatrip-text {
+        font-size: 14px;
+        line-height: calc(17.43 / 14);
+        letter-spacing: -5.5%;
+      }
+
+      .bookatrip-number {
+        color: #9282e1;
+      }
+
+      .bookatrip-text {
+        color: #080809;
+      }
+
+      .bookatrip-activity-bar {
+        @include abst.size(156px, 5px);
+        border-radius: 30px;
+        background-color: #f5f5f5;
+        margin-top: 10px;
+
+        &-progress {
+          @include abst.size(73px, 5px);
+          border-radius: inherit;
+          background-color: #8a79df;
+        }
+      }
+    }
+  }
+
+  &-group {
+    position: absolute;
+    right: 71px;
+    top: 19px;
+    z-index: -1;
+    @include abst.size(354px, 367px);
+  }
+}

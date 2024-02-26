@@ -1,0 +1,61 @@
+section.bookatrip
+  .container
+    .bookatrip-inner
+      //- Content
+      .bookatrip-content
+        p.bookatrip-caption Easy and Fast
+        h2.heading.bookatrip-heading Book your next trip in 3 easy steps
+        ul.bookatrip-list
+          each val in [1,2,3]
+            li.bookatrip-item
+              img.bookatrip-item-image(src="../../images/book-a-trip/bookatrip-1.svg", alt="")
+              .bookatrip-item-info
+                h3.bookatrip-title Choose Destination
+                p.bookatrip-desc Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna, tortor tempus.
+      //- Media
+      .bookatrip-card
+        .bookatrip-card-inner
+          img.bookatrip-card-image(src="../../images/book-a-trip/bookatrip-card-img.jpg", alt="Trip To Greece")
+          h3.bookatrip-card-title Trip To Greece
+          p.bookatrip-card-caption 14-29 June| by Robbin joseph
+          .bookatrip-card-options
+            a.bookatrip-card-icon.bookatrip-card-iconleaf(href="#!")
+              svg(width="14", height="14", viewBox="0 0 14 14", fill="none", xmlns="http://www.w3.org/2000/svg")
+                g(clip-path="url(#clip0_1_199)")
+                  path(d="M13.6544 0.150827C13.2855 0.0428744 4.26244 -0.855475 1.09361 3.42567C-0.309832 5.32223 -0.330914 7.9221 1.02328 11.1525C0.679764 11.8655 0.379038 12.6166 0.133956 13.4091C0.0594447 13.6499 0.194222 13.9052 0.434764 13.9795C0.479608 13.9934 0.525026 14 0.56987 14C0.764338 14 0.944888 13.8744 1.00515 13.6787C3.42037 5.87028 11.2693 2.09267 13.6762 1.13835C13.9105 1.0454 14.2235 0.317405 13.6544 0.150827Z", fill="#84829A")
+                  path(d="M2.47192 12.1298C3.77832 12.6778 5.08453 12.9587 6.29922 12.9587C7.39103 12.9587 8.40923 12.7342 9.28663 12.279C11.0525 11.363 12.1315 9.61081 12.4071 7.21132C12.6878 4.7659 13.0373 3.23416 13.3289 2.29712C10.7336 3.49428 5.16878 6.5974 2.47192 12.1298Z", fill="#84829A")
+                defs
+                  clipPath#clip0_1_199
+                    rect(width="14", height="14", fill="white")
+            a.bookatrip-card-icon.bookatrip-card-iconmap(href="#!")
+              svg(width="14", height="14", viewBox="0 0 14 14", fill="none", xmlns="http://www.w3.org/2000/svg")
+                g(clip-path="url(#clip0_1_213)")
+                  path(d="M13.5009 3.56123e-08C13.4232 -2.92608e-05 13.3466 0.0180173 13.2771 0.0527336L9.48821 1.94771L5.20378 0.0432416C5.19678 0.0402533 5.18878 0.039726 5.18128 0.0367378C5.16201 0.0295308 5.14229 0.0235251 5.12228 0.0187497C5.10239 0.0133885 5.08217 0.00919911 5.06178 0.00624017C5.02118 0.00290038 4.98037 0.00290038 4.93979 0.00624017C4.9194 0.00919911 4.89919 0.0133885 4.8793 0.0187497C4.85929 0.0235251 4.83957 0.0295308 4.82029 0.0367378C4.81279 0.039726 4.80479 0.040224 4.79779 0.0432416L0.297862 2.04322C0.11722 2.12343 0.000825201 2.30255 0.000854498 2.50019V13.5C0.000942387 13.6692 0.0865172 13.8268 0.228341 13.919C0.370195 14.0114 0.549108 14.0257 0.703822 13.957L5.00076 12.047L9.29769 13.957C9.30519 13.96 9.31319 13.957 9.32069 13.9615C9.44174 14.0157 9.5807 14.0126 9.69917 13.953C9.70717 13.9496 9.71616 13.953 9.72416 13.9475L13.7241 11.9476C13.8936 11.8629 14.0007 11.6896 14.0006 11.5V0.500237C14.0008 0.224088 13.777 0.000117221 13.5009 3.56123e-08ZM4.50079 11.1751L1.00083 12.7305V2.8252L4.50079 1.26971V11.1751ZM9.00072 12.7305L5.50076 11.1751V1.26971L9.00072 2.82517V12.7305ZM13.0006 11.1911L10.0007 12.691V2.80918L13.0006 1.3092V11.1911Z", fill="#84829A")
+                defs
+                  clipPath#clip0_1_213
+                    rect(width="14", height="14", fill="white")
+            a.bookatrip-card-icon.bookatrip-card-iconsend(href="#!")
+              svg(width="14", height="14", viewBox="0 0 14 14", fill="none", xmlns="http://www.w3.org/2000/svg")
+                path(d="M12.3433 1.24239L6.02577 7.58322C5.95335 7.54126 5.87719 7.50611 5.79827 7.47822L1.62744 6.06656C1.5013 6.03495 1.38935 5.9621 1.30935 5.85958C1.22936 5.75706 1.18591 5.63076 1.18591 5.50072C1.18591 5.37069 1.22936 5.24439 1.30935 5.14187C1.38935 5.03935 1.5013 4.9665 1.62744 4.93489L11.9758 1.25406C12.0434 1.23109 12.1143 1.21927 12.1858 1.21906C12.2392 1.2182 12.2924 1.22608 12.3433 1.24239Z", fill="#84829A")
+                path(d="M12.7459 2.02424L9.06503 12.3842C9.02444 12.505 8.94545 12.6091 8.84012 12.6807C8.73478 12.7524 8.6089 12.7875 8.4817 12.7809C8.35303 12.7868 8.22602 12.7499 8.1205 12.6761C8.01498 12.6022 7.93687 12.4955 7.89836 12.3726L6.51003 8.20174C6.48214 8.12282 6.44699 8.04666 6.40503 7.97424L12.7575 1.65674C12.7934 1.77729 12.7893 1.9062 12.7459 2.02424Z", fill="#84829A")
+          .bookatrip-card-people
+            .bookatrip-card-people-left
+              img.bookatrip-card-building(src="../../images/book-a-trip/bookatrip-card-building.svg", alt="")
+              span.bookatrip-card-text 24 people going
+            .bookatrip-card-people-right
+              img(src="../../images/book-a-trip/bookatrip-card-heart.svg", alt="")
+        .bookatrip-card-small
+          .bookatrip-card-img
+            img(src="", alt="")
+          .bookatrip-card-content
+            p.bookatrip-ongoing Ongoing
+            h3.bookatrip-rome
+            span.bookatrip-number 40%
+            span.bookatrip-text completed
+            .bookatrip-activity-bar
+              .bookatrip-activity-bar-progress
+
+      img.bookatrip-group(src="../../images/book-a-trip/bookatrip-group.svg", alt="")
+
+
+

@@ -1,0 +1,11 @@
+@use "../../abstracts" as abst;
+
+.bookatrip {
+  margin-block: 186px 200px;
+
+  &-inner {
+    @include abst.flexBox(
+      ((align-items: center, justify-content: space-between))
+    );
+  }
+}
