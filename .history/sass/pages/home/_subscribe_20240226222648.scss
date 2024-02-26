@@ -1,0 +1,91 @@
+@use "../../abstracts" as abst;
+
+.subscribe {
+  &-inner {
+    background-color: rgba(223, 215, 249, 0.25);
+    padding: 79px 144px;
+    border-radius: 129px 20px 20px 20px;
+    text-align: center;
+    position: relative;
+  }
+
+  &-heading {
+    color: abst.$text-clr;
+    @include abst.fontWeight("semibold");
+    font-size: 33px;
+    line-height: calc(54 / 33);
+    margin-bottom: 74px;
+  }
+
+  &-form {
+    @include abst.flexBox(((align-items: center, gap: 24px)));
+    @include abst.size(625px, 68px);
+    margin: 0 auto;
+    position: relative;
+  }
+
+  &-input {
+    font-family: abst.$font-fourth;
+    font-size: 14px;
+    line-height: calc(17.07 / 14);
+    color: #39425d;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 25px 25px 25px 50px;
+    flex: 1;
+
+    &::placeholder {
+      color: #39425d;
+    }
+  }
+
+  &-button {
+    font-family: abst.$font-secondary;
+    @include abst.fontWeight("semibold");
+    padding: 22px 50px;
+    font-size: 17px;
+    line-height: calc(23.15 / 17);
+    background-image: linear-gradient(180deg, #ff946d 0%, #ff7d68 100%);
+    transition: all 0.2s linear;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  &-icon {
+    position: absolute;
+    left: 20px;
+  }
+
+  &-group {
+    &-1 {
+      position: absolute;
+      left: -83px;
+      bottom: 0;
+      z-index: -1;
+    }
+
+    &-2 {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+  }
+
+  &-decore {
+    position: absolute;
+    right: -99px;
+    top: 311px;
+  }
+
+  &-send {
+    @include abst.size(70px);
+    border-radius: 100rem;
+    background-image: linear-gradient(201.65deg, #747def 10.27%, #5e3be1 100%);
+    @include abst.flexBox(((align-items: center, justify-content: center)));
+    position: absolute;
+    bottom: 350px;
+    right: -20px;
+  }
+}

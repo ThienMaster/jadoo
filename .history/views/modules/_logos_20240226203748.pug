@@ -1,0 +1,6 @@
+section.logos
+  .container
+    ul.logos-list
+      each img in [{image: "../../images/logos/axon.png", alt: "logo-axon"}, {image: "../../images/logos/jetstar.png", alt: "logo-jetstar"}, {image: "../../images/logos/expedia.png", alt: "logo-expedia"}, {image: "../../images/logos/qantas.png", alt: "logo-qantas"}, {image: "../../images/logos/alitalia.png", alt: "logo-alitalia"},]
+        li.logos-item
+          img(src= img.image, alt= img.alt)

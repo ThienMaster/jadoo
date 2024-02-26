@@ -1,0 +1,73 @@
+@use "../../abstracts" as abst;
+
+.testimonials {
+  &-inner {
+    @include abst.flexBox(
+      ((align-items: center, justify-content: space-between))
+    );
+  }
+
+  &-captions {
+    @include abst.fontWeight("semibold");
+    font-size: 18px;
+    line-height: calc(27 / 18);
+  }
+
+  &-heading {
+    font-size: 50px;
+    line-height: calc(64.5 / 50);
+    margin-block: 8px 82px;
+    text-transform: capitalize;
+    width: 409px;
+  }
+
+  &-right {
+    position: relative;
+  }
+
+  &-image {
+    @include abst.size(68px);
+    border-radius: 100rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  &-card {
+    background-color: #fff;
+    box-shadow: 0px 14px 28px 0px rgba(0, 0, 0, 0.05);
+    padding: 28px 68px 34px 34px;
+    border-radius: 10px;
+    position: absolute;
+    top: 34px;
+    left: 37px;
+
+    &-second {
+      background-color: #f7f7f7;
+      border: 2px solid #e8e8e8;
+      // box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      padding-bottom: 22px;
+      position: absolute;
+      bottom: 0px;
+      left: 87px;
+    }
+
+    &-quote {
+      width: 402px;
+      color: #4e4e73;
+      line-height: calc(32 / 16);
+    }
+
+    &-name {
+      @include abst.fontWeight("semibold");
+      font-size: 18px;
+      line-height: calc(27 / 18);
+      margin-block: 34px 5px;
+    }
+
+    &-captions {
+      font-size: 14px;
+      line-height: calc(21 / 14);
+    }
+  }
+}

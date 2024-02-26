@@ -1,0 +1,10 @@
+@use "../../abstracts" as abst;
+
+.footer {
+  margin-top: 96px;
+
+  &-top {
+    display: grid;
+    grid-template-columns: 1fr 0.5fr 0.5fr 0.5fr 1fr;
+  }
+}

@@ -1,0 +1,41 @@
+@use "../../abstracts" as abst;
+
+.testimonials {
+  &-inner {
+    @include abst.flexBox(
+      ((align-items: center, justify-content: space-between))
+    );
+  }
+
+  &-captions {
+    @include abst.fontWeight("semibold");
+    font-size: 18px;
+    line-height: calc(27 / 18);
+  }
+
+  &-heading {
+    font-size: 50px;
+    line-height: calc(64.5 / 50);
+    margin-block: 8px 82px;
+    width: 409px;
+  }
+
+  &-right {
+    width: 669px;
+  }
+
+  &-image {
+    @include abst.size(68px);
+    border-radius: 100rem;
+  }
+
+  &-card {
+    background-color: #fff;
+    box-shadow: 0px 14px 28px 0px rgba(0, 0, 0, 0.05);
+    padding: 28px 68px 34px 34px;
+
+    &-quote {
+      width: 402px;
+    }
+  }
+}

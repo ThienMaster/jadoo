@@ -1,0 +1,19 @@
+@use "../../abstracts" as abst;
+
+.logos {
+  margin-block: 96px 111px;
+
+  &-container {
+    padding-inline: 51px;
+  }
+
+  &-list {
+    @include abst.flexBox(((align-items: center, gap: 77px)));
+  }
+
+  &-item-image {
+    width: 173px;
+    object-fit: cover;
+    cursor: pointer;
+  }
+}

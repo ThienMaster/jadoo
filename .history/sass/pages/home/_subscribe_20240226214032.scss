@@ -1,0 +1,18 @@
+@use "../../abstracts" as abst;
+
+.subscribe {
+  &-inner {
+    background-color: rgba(223, 215, 249, 0.2);
+    // opacity: 20%;
+    padding: 79px 144px;
+    border-radius: 129px 20px 20px 20px;
+    text-align: center;
+  }
+
+  &-heading {
+    color: abst.$text-clr;
+    @include abst.fontWeight("semibold");
+    font-size: 33px;
+    line-height: calc(54 / 33);
+  }
+}

@@ -1,0 +1,23 @@
+@use "../../abstracts" as abst;
+
+.logos {
+  margin-block: 96px 111px;
+
+  &-list {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+
+  &-item-image {
+    position: relative;
+
+    img {
+      @include abst.size(173px, 130px);
+      object-fit: cover;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}

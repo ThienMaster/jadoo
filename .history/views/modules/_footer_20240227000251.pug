@@ -1,0 +1,48 @@
+footer.footer
+  .container
+    .footer-top
+      .footer-column
+        a.logo(href="./") Jadoo.
+        p.footer-caption Book your trip in minute, get full Control for much longer.
+      .footer-column
+        h3.heading.footer-heading Company
+        ul.footer-links
+          each link in ["About", "Careers", "Mobile"]
+            li.footer-link-item
+              a.footer-link(href="#!")= link
+      .footer-column
+        h3.heading.footer-heading Contact
+        ul.footer-links
+          each link in ["Help/FAQ", "Press", "Affilates"]
+            li.footer-link-item
+              a.footer-link(href="#!")= link
+      .footer-column
+        h3.heading.footer-heading More
+        ul.footer-links
+          each link in ["Airlinefees", "Airline", "Low fare tips"]
+            li.footer-link-item
+              a.footer-link(href="#!")= link
+      .footer-column
+        .footer-socials
+          a.footer-socials-btn(href="#!")
+            i.fa-brands.fa-facebook-f.fa-xs
+          a.footer-socials-btn(href="#!")
+            i.fa-brands.fa-instagram.fa-xs
+          a.footer-socials-btn(href="#!")
+            i.fa-brands.fa-twitter.fa-xs
+        p.footer-app Discover our app
+        .footer-app-wrapper
+          a.button.footer-button(href="#!")
+            .footer-button-content
+              img.footer-image(src="./images/footer/google-play.svg", alt="google-play")
+              .footer-info
+                h4 Get it on
+                p Google Play
+          a.button.footer-button(href="#!")
+            .footer-button-content
+              img.footer-image(src="./images/footer/apple.svg", alt="apple-store")
+              .footer-info
+                h4 Avalible on the
+                p Apple Store
+    .footer-bottom
+      p All rights reserved@jadoo.co

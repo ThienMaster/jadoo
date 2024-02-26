@@ -1,0 +1,11 @@
+@use "../../abstracts" as abst;
+
+.logos {
+  margin-block: 96px 111px;
+
+  &-list {
+    @include abst.flexBox(
+      ((align-items: center, justify-content: space-between))
+    );
+  }
+}

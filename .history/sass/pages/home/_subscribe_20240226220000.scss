@@ -1,0 +1,50 @@
+@use "../../abstracts" as abst;
+
+.subscribe {
+  &-inner {
+    background-color: rgba(223, 215, 249, 0.25);
+    padding: 79px 144px;
+    border-radius: 129px 20px 20px 20px;
+    text-align: center;
+  }
+
+  &-heading {
+    color: abst.$text-clr;
+    @include abst.fontWeight("semibold");
+    font-size: 33px;
+    line-height: calc(54 / 33);
+    margin-bottom: 74px;
+  }
+
+  &-form {
+    @include abst.flexBox(((align-items: center, gap: 24px)));
+    @include abst.size(625px, 68px);
+    margin: 0 auto;
+    position: relative;
+  }
+
+  &-input {
+    font-family: abst.$font-fourth;
+    font-size: 14px;
+    line-height: calc(17.07 / 14);
+    color: #39425d;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 25px 25px 25px 50px;
+    flex: 1;
+  }
+
+  &-button {
+    font-family: abst.$font-secondary;
+    @include abst.fontWeight("semibold");
+    padding: 22px 50px;
+    font-size: 17px;
+    line-height: calc(23.15 / 17);
+    background-image: linear-gradient(180deg, #ff946d 0%, #ff7d68 100%);
+  }
+
+  &-icon {
+    position: absolute;
+    left: 20px;
+  }
+}

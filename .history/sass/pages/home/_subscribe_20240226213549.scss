@@ -1,0 +1,9 @@
+@use "../../abstracts" as abst;
+
+.subscribe {
+  background-color: #dfd7f9;
+
+  &-inner {
+    padding: 79px 144px;
+  }
+}

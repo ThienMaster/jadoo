@@ -1,0 +1,15 @@
+@use "../../abstracts" as abst;
+
+.logos {
+  margin-block: 96px 111px;
+
+  &-list {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+
+  &-item-image {
+    @include abst.size(173px, 130px);
+    object-fit: cover;
+  }
+}
