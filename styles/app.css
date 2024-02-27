@@ -493,6 +493,10 @@ body {
 .destinations {
   position: relative;
 }
+.destinations-container {
+  container-type: inline-size;
+  container-name: destinations-container;
+}
 .destinations-top {
   margin-bottom: 60px;
   text-align: center;
@@ -573,15 +577,29 @@ body {
   bottom: 47px;
   z-index: -1;
 }
+@container destinations-container (max-width: 991.98px) {
+  .destinations-decore {
+    display: none;
+  }
+}
 
 .bookatrip {
   margin-block: 186px 200px;
+  container-type: inline-size;
+  container-name: bookatrip;
 }
 .bookatrip-inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
   position: relative;
+  container-type: inline-size;
+  container-name: bookatrip-inner;
+}
+@container bookatrip (max-width: 991.98px) {
+  .bookatrip-inner {
+    flex-direction: column;
+  }
 }
 .bookatrip-caption {
   font-weight: 600;
@@ -721,13 +739,11 @@ body {
   color: #84829a;
   font-size: 14px;
   line-height: 1.245;
-  letter-spacing: -3.5%;
 }
 .bookatrip-card-content .bookatrip-rome {
   color: #080809;
   font-size: 18px;
   line-height: 1.245;
-  letter-spacing: -1.5%;
   margin-block: 6px 14px;
 }
 .bookatrip-card-content .bookatrip-number,
@@ -755,6 +771,33 @@ body {
   border-radius: inherit;
   background-color: #8a79df;
 }
+@container bookatrip-inner (max-width: 991.98px) {
+  .bookatrip-content {
+    text-align: center;
+  }
+  .bookatrip-heading {
+    margin: 0 auto;
+  }
+  .bookatrip-list {
+    flex-direction: row;
+    max-width: 100%;
+    margin-top: 30px;
+  }
+  .bookatrip-item {
+    flex-direction: column;
+    width: 33.3333333333%;
+    background: #fff;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0px 14px 28px 0px rgba(0, 0, 0, 0.05);
+  }
+  .bookatrip-item-image {
+    margin: 0 auto;
+  }
+  .bookatrip-card {
+    margin: 0 auto;
+  }
+}
 .bookatrip-group {
   position: absolute;
   right: -10px;
@@ -764,11 +807,27 @@ body {
 
 .testimonials {
   height: 365px;
+  container-type: inline-size;
+  container-name: testimonials;
+}
+@media (max-width: 1023.98px) {
+  .testimonials {
+    height: auto;
+  }
 }
 .testimonials-inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  container-type: inline-size;
+  container-name: testimonials-inner;
+}
+@container testimonials (max-width: 991.98px) {
+  .testimonials-inner {
+    flex-direction: column;
+    gap: 30px;
+    position: relative;
+  }
 }
 .testimonials-captions {
   font-weight: 600;
@@ -842,12 +901,34 @@ body {
   margin-top: 56px;
   display: inline-block;
 }
+@container testimonials-inner (max-width: 991.98px) {
+  .testimonials-left {
+    text-align: center;
+  }
+  .testimonials-group {
+    margin: 0 auto;
+  }
+  .testimonials-pagination {
+    position: absolute;
+    right: 80px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
 
 .logos {
-  margin-block: 96px 111px;
+  container-type: inline-size;
+  container-name: logo;
 }
 .logos-container {
+  margin-block: 96px 111px;
   padding-inline: 51px;
+}
+@container logo (max-width: 991.98px) {
+  .logos-container {
+    margin-bottom: 60px;
+    padding-top: 50px;
+  }
 }
 .logos-list {
   display: flex;
@@ -862,6 +943,14 @@ body {
 
 .subscribe {
   height: 490px;
+  container-type: inline-size;
+  container-name: subscribe;
+}
+@media (max-width: 1023.98px) {
+  .subscribe {
+    height: auto;
+    padding-inline: 50px;
+  }
 }
 .subscribe-inner {
   background-color: rgba(223, 215, 249, 0.25);
@@ -943,9 +1032,25 @@ body {
   bottom: 350px;
   right: -20px;
 }
+@container subscribe (max-width: 991.98px) {
+  .subscribe-inner {
+    padding: 30px 40px;
+  }
+  .subscribe-send {
+    top: -19px;
+  }
+  .subscribe-decore {
+    display: none;
+  }
+  .subscribe-form {
+    width: 100%;
+  }
+}
 
 .footer {
   margin-top: 96px;
+  container-type: inline-size;
+  container-name: footer;
 }
 .footer-top {
   display: grid;
@@ -1046,6 +1151,21 @@ body {
   line-height: 1.245;
   text-align: center;
   padding: 90px 0 79px;
+}
+@container footer (max-width: 991.98px) {
+  .footer-top {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    row-gap: 40px;
+  }
+  .footer-caption {
+    width: 100%;
+  }
+  .footer-bottom p {
+    padding: 50px 0;
+  }
+  .footer-column:last-of-type {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=app.css.map */

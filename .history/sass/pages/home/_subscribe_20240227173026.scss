@@ -5,11 +5,6 @@
   container-type: inline-size;
   container-name: subscribe;
 
-  @media (max-width: 1023.98px) {
-    height: auto;
-    padding-inline: 50px;
-  }
-
   &-inner {
     background-color: rgba(223, 215, 249, 0.25);
     padding: 79px 144px;
@@ -105,14 +100,6 @@
 
     &-send {
       top: -19px;
-    }
-
-    &-decore {
-      display: none;
-    }
-
-    &-form {
-      width: 100%;
     }
   }
 }

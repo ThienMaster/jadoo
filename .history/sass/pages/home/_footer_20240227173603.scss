@@ -124,18 +124,14 @@
     &-top {
       grid-template-columns: repeat(4, minmax(0, 1fr));
       row-gap: 40px;
+
+      & .footer-column:nth-last-of-type {
+        display: none;
+      }
     }
 
     &-caption {
       width: 100%;
-    }
-
-    &-bottom p {
-      padding: 50px 0;
-    }
-
-    &-column:last-of-type {
-      display: none;
     }
   }
 }

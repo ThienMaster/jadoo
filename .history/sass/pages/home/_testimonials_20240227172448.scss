@@ -5,7 +5,7 @@
   container-type: inline-size;
   container-name: testimonials;
 
-  @media (max-width: 1023.98px) {
+  @media (max-width: 1023.98) {
     height: auto;
   }
 
@@ -19,7 +19,6 @@
     @container testimonials (max-width: 991.98px) {
       & {
         flex-direction: column;
-        gap: 30px;
         position: relative;
       }
     }
@@ -110,15 +109,11 @@
   }
 
   @container testimonials-inner (max-width: 991.98px) {
-    &-left {
-      text-align: center;
-    }
-
-    &-group {
+    .testimonials-group {
       margin: 0 auto;
     }
 
-    &-pagination {
+    .testimonials-pagination {
       position: absolute;
       right: 80px;
       top: 50%;
