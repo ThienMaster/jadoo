@@ -1,0 +1,18 @@
+.menu
+  .menu-mobile
+    //- Menu for tablet/mobile
+    input.menu-checkbox(type="checkbox", name="menu-checkbox" id="menu-checkbox" hidden)
+    label(for="menu-checkbox")
+      img.menu-header-icon(src="../../images/menu.png", alt="")
+    //- Overlay
+    label.menu-overlay(for="menu-checkbox")
+    //- Menu content
+    .menu-drawer
+      //- Navigation mobile
+      ul#header-menu-list-mobile
+      //- Dùng JS để copy navigation
+      script.
+        const navPC = document.querySelector("#header-menu-list-pc");
+        const navMobile = document.querySelector("#header-menu-list-mobile");
+        // Sao chép
+        navMobile.innerHTML = navPC.innerHTML;

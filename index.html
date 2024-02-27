@@ -13,10 +13,10 @@
   <body>
     <div class="wrapper">
       <header class="header"><img class="header-decore" src="./images/Decore.png" alt="Decore">
-        <div class="container">
+        <div class="container header-container">
           <div class="header-top"><a class="logo" href="./"><img src="./images/Logo.svg" alt="Logo Jadoo"></a>
             <nav class="header-menu">
-              <ul class="header-menu-list">
+              <ul class="header-menu-list" id="header-menu-list-pc">
                 <li class="header-menu-item"><a class="header-menu-links" href="#!">Desitnations</a></li>
                 <li class="header-menu-item"><a class="header-menu-links" href="#!">Hotels</a></li>
                 <li class="header-menu-item"><a class="header-menu-links" href="#!">Flights</a></li>
@@ -38,6 +38,33 @@
           </div>
         </div>
       </header>
+      <div class="menu">
+        <div class="menu-mobile">
+          <input class="menu-checkbox" type="checkbox" name="menu-checkbox" id="menu-checkbox" hidden>
+          <label for="menu-checkbox"><img class="menu-header-icon" src="../../images/menu.png" alt=""></label>
+          <label class="menu-overlay" for="menu-checkbox"></label>
+          <div class="menu-drawer">
+            <div class="menu-drawer-top">
+              <label for="menu-checkbox">
+                <svg class="close-menu" xmlns="http://www.w3.org/2000/svg" height="16" width="16" viewBox="0 0 384 512">
+                  <path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z" fill="currentColor"></path>
+                </svg>
+              </label>
+            </div>
+            <ul id="header-menu-list-mobile"></ul>
+            <script>
+              const navPC = document.querySelector("#header-menu-list-pc");
+              const navMobile = document.querySelector("#header-menu-list-mobile");
+              // Sao chép
+              navMobile.innerHTML = navPC.innerHTML;
+            </script>
+            <div class="separate"></div>
+            <div class="menu-drawer-button"><a class="header-menu-links" href="#!">Login</a><a class="header-menu-links" href="#!">Sign up</a>
+            </div>
+            <div class="separate"></div><a class="menu-drawer-chancelg" href="#!">EN<i class="fa-solid fa-chevron-down"></i></a>
+          </div>
+        </div>
+      </div>
       <main>
         <section class="services">
           <div class="container services-container">
@@ -47,20 +74,28 @@
             </div>
             <ul class="services-list">
               <li class="services-item"><img class="services-item-image" src="./images/services/services-1.svg" alt="Calculated Weather"/>
-                <h3 class="services-item-title">Calculated Weather</h3>
-                <p class="services-item-desc">Built Wicket longer admire do barton vanity itself do in it.</p>
+                <div class="services-item-content">
+                  <h3 class="services-item-title">Calculated Weather</h3>
+                  <p class="services-item-desc">Built Wicket longer admire do barton vanity itself do in it.</p>
+                </div>
               </li>
               <li class="services-item"><img class="services-item-image" src="./images/services/services-2.svg" alt="Best Flights"/>
-                <h3 class="services-item-title">Best Flights</h3>
-                <p class="services-item-desc">Engrossed listening. Park gate sell they west hard for the.</p>
+                <div class="services-item-content">
+                  <h3 class="services-item-title">Best Flights</h3>
+                  <p class="services-item-desc">Engrossed listening. Park gate sell they west hard for the.</p>
+                </div>
               </li>
               <li class="services-item"><img class="services-item-image" src="./images/services/services-3.svg" alt="Local Events"/>
-                <h3 class="services-item-title">Local Events</h3>
-                <p class="services-item-desc">Barton vanity itself do in it. Preferd to men it engrossed listening.</p>
+                <div class="services-item-content">
+                  <h3 class="services-item-title">Local Events</h3>
+                  <p class="services-item-desc">Barton vanity itself do in it. Preferd to men it engrossed listening.</p>
+                </div>
               </li>
               <li class="services-item"><img class="services-item-image" src="./images/services/services-4.svg" alt="Customization"/>
-                <h3 class="services-item-title">Customization</h3>
-                <p class="services-item-desc">We deliver outsourced aviation services for military customers</p>
+                <div class="services-item-content">
+                  <h3 class="services-item-title">Customization</h3>
+                  <p class="services-item-desc">We deliver outsourced aviation services for military customers</p>
+                </div>
               </li>
             </ul><img class="services-group" src="./images/Group.svg" alt="Group"><img class="services-rectangle" src="./images/Rectangle.svg" alt="Rectangle">
           </div>

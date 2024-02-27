@@ -1,0 +1,12 @@
+@use "../../abstracts" as abst;
+
+.menu {
+  @container wrapper (max-width: 991.98px) {
+    &-header-icon {
+      position: absolute;
+      top: 25px;
+      right: 15px;
+      cursor: pointer;
+    }
+  }
+}

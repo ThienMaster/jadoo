@@ -1,0 +1,51 @@
+@use "../../abstracts" as abst;
+
+.menu {
+  &-mobile {
+    @media (min-width: 1005px) {
+      display: none;
+    }
+  }
+
+  @container wrapper (max-width: 970px) {
+    &-header-icon {
+      position: absolute;
+      top: 25px;
+      right: 15px;
+      cursor: pointer;
+      z-index: 3;
+    }
+
+    &-overlay {
+      position: fixed;
+      background-color: rgba(0, 0, 0, 0.3);
+      inset: 0;
+      z-index: 1;
+      //- Bình thường ẩn overlay đi
+      opacity: 0;
+      visibility: hidden;
+      cursor: pointer;
+      transition: 0.5s;
+    }
+
+    //- Kiểm tra nếu checkbox được check thì hiện overlay
+    &-checkbox:checked ~ .menu-overlay {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    &-drawer {
+      position: fixed;
+      background-color: #2e1919;
+      inset: 0 60% 0 0;
+      z-index: 2;
+      transform: translateX(-100%);
+      transition: 0.5s;
+    }
+
+    //- Kiểm tra nếu checkbox được check thì hiện menu
+    // &-checkbox:checked ~ .menu-drawer {
+    //   transform: translateX(-100%);
+    // }
+  }
+}

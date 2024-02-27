@@ -1,0 +1,22 @@
+@use "../../abstracts" as abst;
+
+.menu {
+  &-mobile {
+    @media (min-width: 1005px) {
+      display: none;
+    }
+  }
+
+  @container wrapper (max-width: 970px) {
+    &-header-icon {
+      position: absolute;
+      top: 25px;
+      right: 15px;
+      cursor: pointer;
+    }
+
+    &-overlay {
+      position: fixed;
+    }
+  }
+}
