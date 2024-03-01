@@ -1,18 +1,20 @@
 @use "../../abstracts" as abst;
 
 .subscribe {
+  height: 490px;
   container-type: inline-size;
   container-name: subscribe;
 
   &-container {
-    padding-block: 10px 70px;
     @container subscribe (max-width: 1020px) {
-      padding-inline: 30px;
-
-      & .subscribe-decore {
-        display: none;
-      }
+      height: auto;
+      padding-inline: 40px;
     }
+  }
+
+  @media (max-width: 1023.98px) {
+    height: auto;
+    padding-inline: 50px;
   }
 
   &-inner {
@@ -90,7 +92,7 @@
   &-decore {
     position: absolute;
     right: -99px;
-    top: 308px;
+    top: 311px;
   }
 
   &-send {

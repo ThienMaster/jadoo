@@ -15,10 +15,10 @@
     }
 
     @container services (max-width: 853px) {
-      padding-top: 10px;
+      padding-top: 5px;
 
       & .services-group {
-        top: 10px;
+        top: 0;
       }
     }
   }

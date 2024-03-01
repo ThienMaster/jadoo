@@ -1,0 +1,28 @@
+@use "../../abstracts" as abst;
+
+.logos {
+  container-type: inline-size;
+  container-name: logo;
+
+  &-container {
+    margin-block: 96px 111px;
+    padding-inline: 51px;
+
+    @container logo (max-width: 1020px) {
+      & {
+        margin-bottom: 60px;
+        padding-top: 50px;
+      }
+    }
+  }
+
+  &-list {
+    @include abst.flexBox(((align-items: center, gap: 77px)));
+  }
+
+  &-item-image {
+    width: 173px;
+    object-fit: cover;
+    cursor: pointer;
+  }
+}

@@ -1,8 +1,13 @@
 @use "../../abstracts" as abst;
 
 .testimonials {
+  height: 365px;
   container-type: inline-size;
   container-name: testimonials;
+
+  @media (max-width: 1023.98px) {
+    min-height: 65vh;
+  }
 
   &-inner {
     @include abst.flexBox(
@@ -87,8 +92,6 @@
 
   &-pagination {
     margin-top: 20px;
-    position: relative;
-    right: -70px;
 
     &-icon {
       color: #bcb7c2;

@@ -6,20 +6,16 @@
   container-type: inline-size;
   container-name: services;
 
+  // @media (max-width: 676.98px) {
+
+  // }
+
   &-container {
     container-type: inline-size;
     container-name: services-container;
 
     @container services (max-width: 1020px) {
       padding-top: 70px;
-    }
-
-    @container services (max-width: 853px) {
-      padding-top: 10px;
-
-      & .services-group {
-        top: 10px;
-      }
     }
   }
 
@@ -104,12 +100,6 @@
     z-index: -1;
   }
 
-  @container services-container (max-width: 1100px) {
-    &-rectangle {
-      display: none;
-    }
-  }
-
   @container services-container (max-width: 991.98px) {
     &-list {
       grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -128,6 +118,10 @@
       right: 0;
       top: 70px;
       z-index: -1;
+    }
+
+    &-rectangle {
+      display: none;
     }
   }
 

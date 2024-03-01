@@ -8,10 +8,6 @@
     padding-block: 10px 70px;
     @container subscribe (max-width: 1020px) {
       padding-inline: 30px;
-
-      & .subscribe-decore {
-        display: none;
-      }
     }
   }
 

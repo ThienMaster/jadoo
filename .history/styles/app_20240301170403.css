@@ -88,7 +88,7 @@ body {
 .header {
   position: relative;
   container-type: inline-size;
-  container-name: headerr;
+  container-name: header;
 }
 .header-container {
   container-type: inline-size;
@@ -101,7 +101,7 @@ body {
   width: 745px;
   object-fit: cover;
 }
-@container headerr (max-width: 970px) {
+@container header (max-width: 970px) {
   .header-decore {
     width: 650px;
   }
@@ -312,39 +312,6 @@ body {
     display: none;
   }
 }
-@container hero (max-width: 540px) {
-  .hero-content {
-    padding-bottom: 0;
-  }
-  .hero-tagline {
-    font-size: 18px;
-  }
-  .hero-heading {
-    font-size: 50px;
-  }
-  .hero-heading img {
-    left: 40px;
-    top: 40px;
-  }
-  .hero-caption {
-    font-size: 15px;
-  }
-  .hero-links {
-    gap: 20px;
-  }
-  .hero-button {
-    font-size: 16px;
-    padding: 12px 20px;
-  }
-  .hero-play-icon {
-    width: 40px;
-    height: 40px;
-    font-size: 12px;
-  }
-  .hero-play-text {
-    font-size: 15px;
-  }
-}
 
 @media (min-width: 975px) {
   .menu-mobile {
@@ -437,17 +404,9 @@ body {
   container-type: inline-size;
   container-name: services-container;
 }
-@container services (max-width: 1020px) {
+@container services (max-width: 991.98px) {
   .services-container {
     padding-top: 70px;
-  }
-}
-@container services (max-width: 853px) {
-  .services-container {
-    padding-top: 10px;
-  }
-  .services-container .services-group {
-    top: 10px;
   }
 }
 .services-top {
@@ -516,14 +475,9 @@ body {
 }
 .services-rectangle {
   position: absolute;
-  left: 290px;
+  left: 455px;
   bottom: -32px;
   z-index: -1;
-}
-@container services-container (max-width: 1100px) {
-  .services-rectangle {
-    display: none;
-  }
 }
 @container services-container (max-width: 991.98px) {
   .services-list {
@@ -542,21 +496,7 @@ body {
     top: 70px;
     z-index: -1;
   }
-}
-@container services-container (max-width: 540px) {
-  .services-top {
-    margin-bottom: 20px;
-  }
-  .services-caption {
-    font-size: 15px;
-  }
-  .services-heading {
-    font-size: 30px;
-  }
-  .services-list {
-    grid-template-columns: minmax(0, 1fr);
-  }
-  .services-group {
+  .services-rectangle {
     display: none;
   }
 }
@@ -585,7 +525,7 @@ body {
 .destinations-list {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 35px;
+  column-gap: 35px;
 }
 .destinations-item {
   background-color: #fff;
@@ -653,34 +593,11 @@ body {
     display: none;
   }
 }
-@container destinations-container (max-width: 540px) {
-  .destinations-top {
-    margin-bottom: 30px;
-  }
-  .destinations-caption {
-    font-size: 15px;
-  }
-  .destinations-heading {
-    font-size: 30px;
-  }
-  .destinations-list {
-    grid-template-columns: minmax(0, 1fr);
-  }
-}
 
 .bookatrip {
   margin-block: 186px 200px;
   container-type: inline-size;
   container-name: bookatrip;
-}
-@media (max-width: 767.98px) {
-  .bookatrip {
-    margin: 120px 0;
-  }
-}
-.bookatrip-container {
-  container-type: inline-size;
-  container-name: bookatrip-container;
 }
 .bookatrip-inner {
   display: flex;
@@ -690,7 +607,7 @@ body {
   container-type: inline-size;
   container-name: bookatrip-inner;
 }
-@container bookatrip (max-width: 1020px) {
+@container bookatrip (max-width: 991.98px) {
   .bookatrip-inner {
     flex-direction: column;
   }
@@ -892,27 +809,6 @@ body {
     margin: 0 auto;
   }
 }
-@container bookatrip-inner (max-width: 540px) {
-  .bookatrip-caption {
-    font-size: 15px;
-  }
-  .bookatrip-heading {
-    font-size: 30px;
-  }
-  .bookatrip-list {
-    flex-direction: column;
-  }
-  .bookatrip-item {
-    width: 100%;
-    flex-direction: row;
-  }
-  .bookatrip-item-info {
-    text-align: left;
-  }
-  .bookatrip-card {
-    display: none;
-  }
-}
 .bookatrip-group {
   position: absolute;
   right: -10px;
@@ -921,8 +817,14 @@ body {
 }
 
 .testimonials {
+  height: 365px;
   container-type: inline-size;
   container-name: testimonials;
+}
+@media (max-width: 1023.98px) {
+  .testimonials {
+    height: auto;
+  }
 }
 .testimonials-inner {
   display: flex;
@@ -931,7 +833,7 @@ body {
   container-type: inline-size;
   container-name: testimonials-inner;
 }
-@container testimonials (max-width: 1020px) {
+@container testimonials (max-width: 991.98px) {
   .testimonials-inner {
     flex-direction: column;
     gap: 30px;
@@ -997,8 +899,6 @@ body {
 }
 .testimonials-pagination {
   margin-top: 20px;
-  position: relative;
-  right: -70px;
 }
 .testimonials-pagination-icon {
   color: #bcb7c2;
@@ -1025,10 +925,18 @@ body {
 }
 
 .logos {
-  margin-block: 96px 61px;
+  container-type: inline-size;
+  container-name: logo;
 }
 .logos-container {
-  padding-block: 50px;
+  margin-block: 96px 111px;
+  padding-inline: 51px;
+}
+@container logo (max-width: 991.98px) {
+  .logos-container {
+    margin-bottom: 60px;
+    padding-top: 50px;
+  }
 }
 .logos-list {
   display: flex;
@@ -1042,18 +950,14 @@ body {
 }
 
 .subscribe {
+  height: 490px;
   container-type: inline-size;
   container-name: subscribe;
 }
-.subscribe-container {
-  padding-block: 10px 70px;
-}
-@container subscribe (max-width: 1020px) {
-  .subscribe-container {
-    padding-inline: 30px;
-  }
-  .subscribe-container .subscribe-decore {
-    display: none;
+@media (max-width: 1023.98px) {
+  .subscribe {
+    height: auto;
+    padding-inline: 50px;
   }
 }
 .subscribe-inner {
@@ -1122,7 +1026,7 @@ body {
 .subscribe-decore {
   position: absolute;
   right: -99px;
-  top: 308px;
+  top: 311px;
 }
 .subscribe-send {
   width: 70px;
@@ -1256,7 +1160,7 @@ body {
   text-align: center;
   padding: 90px 0 79px;
 }
-@container footer (max-width: 1020px) {
+@container footer (max-width: 991.98px) {
   .footer-top {
     grid-template-columns: repeat(4, minmax(0, 1fr));
     row-gap: 40px;

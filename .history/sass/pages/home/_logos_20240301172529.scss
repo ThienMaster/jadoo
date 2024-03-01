@@ -1,10 +1,18 @@
 @use "../../abstracts" as abst;
 
 .logos {
-  margin-block: 96px 61px;
+  container-type: inline-size;
+  container-name: logo;
 
   &-container {
-    padding-block: 50px;
+    padding: 96px 51px 111px;
+    margin-top: 50px;
+
+    // @container logo (max-width: 1020px) {
+    //   & {
+    //     margin-top: 30px;
+    //   }
+    // }
   }
 
   &-list {

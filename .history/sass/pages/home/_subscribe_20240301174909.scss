@@ -6,13 +6,10 @@
 
   &-container {
     padding-block: 10px 70px;
-    @container subscribe (max-width: 1020px) {
-      padding-inline: 30px;
-
-      & .subscribe-decore {
-        display: none;
-      }
-    }
+    // @container subscribe (max-width: 1020px) {
+    //   height: auto;
+    //   padding-inline: 50px;
+    // }
   }
 
   &-inner {

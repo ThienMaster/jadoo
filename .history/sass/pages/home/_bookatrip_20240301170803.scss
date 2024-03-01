@@ -4,9 +4,6 @@
   margin-block: 186px 200px;
   container-type: inline-size;
   container-name: bookatrip;
-  @media (max-width: 767.98px) {
-    margin: 120px 0;
-  }
 
   &-container {
     container-type: inline-size;
@@ -21,7 +18,7 @@
     container-type: inline-size;
     container-name: bookatrip-inner;
 
-    @container bookatrip (max-width: 1020px) {
+    @container bookatrip-container (max-width: 991.98px) {
       & {
         flex-direction: column;
       }
@@ -243,33 +240,6 @@
 
     &-card {
       margin: 0 auto;
-    }
-  }
-
-  @container bookatrip-inner (max-width: 540px) {
-    &-caption {
-      font-size: 15px;
-    }
-
-    &-heading {
-      font-size: 30px;
-    }
-
-    &-list {
-      flex-direction: column;
-    }
-
-    &-item {
-      width: 100%;
-      flex-direction: row;
-
-      &-info {
-        text-align: left;
-      }
-    }
-
-    &-card {
-      display: none;
     }
   }
 
