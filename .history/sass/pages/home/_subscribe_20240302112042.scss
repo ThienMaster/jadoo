@@ -132,10 +132,6 @@
       @include abst.flexBox(((flex-direction: column)));
     }
 
-    &-input {
-      padding-left: 25px;
-    }
-
     &-icon {
       display: none;
     }

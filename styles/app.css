@@ -888,6 +888,12 @@ body {
   .bookatrip-item-image {
     margin: 0 auto;
   }
+  .bookatrip-item-info {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+  }
   .bookatrip-card {
     margin: 0 auto;
   }
@@ -936,6 +942,11 @@ body {
     flex-direction: column;
     gap: 30px;
     position: relative;
+  }
+}
+@media (max-width: 767.98px) {
+  .testimonials-inner {
+    gap: 70px;
   }
 }
 .testimonials-captions {
@@ -1023,9 +1034,49 @@ body {
     display: none;
   }
 }
+@container testimonials-inner (max-width: 540px) {
+  .testimonials-caption {
+    font-size: 15px;
+  }
+  .testimonials-heading {
+    font-size: 30px;
+    width: 100%;
+    text-wrap: balance;
+    margin-bottom: 42px;
+  }
+  .testimonials-right {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  .testimonials-image {
+    top: -57px;
+  }
+  .testimonials-card {
+    padding: 10px 20px;
+    top: 0;
+    left: 0;
+  }
+  .testimonials-card-quote {
+    width: 100%;
+  }
+  .testimonials-card-second {
+    padding: 10px 20px;
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+}
 
 .logos {
   margin-block: 96px 61px;
+  container-type: inline-size;
+  container-name: logo;
+}
+@media (max-width: 767.98px) {
+  .logos {
+    margin-top: 43px;
+  }
 }
 .logos-container {
   padding-block: 50px;
@@ -1039,6 +1090,22 @@ body {
   width: 173px;
   object-fit: cover;
   cursor: pointer;
+}
+@container logo (max-width: 540px) {
+  .logos-container {
+    padding-block: 0;
+  }
+  .logos-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+  }
+  .logos-item {
+    margin: 0 auto;
+  }
+  .logos-item:nth-child(3), .logos-item:nth-child(4) {
+    margin-top: -70px;
+  }
 }
 
 .subscribe {
@@ -1075,7 +1142,6 @@ body {
   align-items: center;
   gap: 24px;
   width: 625px;
-  height: 68px;
   margin: 0 auto;
   position: relative;
 }
@@ -1150,11 +1216,33 @@ body {
     width: 100%;
   }
 }
+@container subscribe (max-width: 540px) {
+  .subscribe-heading {
+    font-size: 30px;
+    text-wrap: balance;
+    margin-bottom: 37px;
+  }
+  .subscribe-form {
+    display: flex;
+    flex-direction: column;
+  }
+  .subscribe-input {
+    padding-left: 25px;
+  }
+  .subscribe-icon {
+    display: none;
+  }
+}
 
 .footer {
   margin-top: 96px;
   container-type: inline-size;
   container-name: footer;
+}
+@media (max-width: 767.98px) {
+  .footer {
+    margin-top: 40px;
+  }
 }
 .footer-top {
   display: grid;
@@ -1269,6 +1357,18 @@ body {
   }
   .footer-column:last-of-type {
     display: none;
+  }
+}
+@container footer (max-width: 540px) {
+  .footer-top {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .footer-column:last-of-type {
+    display: block;
+  }
+  .footer-app-wrapper {
+    gap: 15px;
   }
 }
 

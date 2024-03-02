@@ -5,10 +5,6 @@
   container-type: inline-size;
   container-name: logo;
 
-  @media (max-width: 767.98px) {
-    margin-top: 43px;
-  }
-
   &-container {
     padding-block: 50px;
   }
@@ -39,7 +35,7 @@
 
       &:nth-child(3),
       &:nth-child(4) {
-        margin-top: -70px;
+        margin: -70px auto 0;
       }
     }
   }
