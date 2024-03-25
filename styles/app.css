@@ -346,12 +346,12 @@ body {
   }
 }
 
-@media (min-width: 975px) {
+@media (min-width: 970px) {
   .menu-mobile {
     display: none;
   }
 }
-@container wrapper (max-width: 970px) {
+@container wrapper (max-width: 969.98px) {
   .menu-header-icon {
     position: absolute;
     top: 25px;

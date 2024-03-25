@@ -2,12 +2,12 @@
 
 .menu {
   &-mobile {
-    @media (min-width: 970px) {
+    @media (min-width: 971px) {
       display: none;
     }
   }
 
-  @container wrapper (max-width: 969.98px) {
+  @container wrapper (max-width: 970px) {
     &-header-icon {
       position: absolute;
       top: 25px;
